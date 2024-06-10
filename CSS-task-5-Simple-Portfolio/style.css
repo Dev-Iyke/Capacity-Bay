@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Ubuntu&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+}
+/******* HERO SECTION ******/
+.hero{
+  background-color: rgb(184, 252, 252);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.cld-one{
+  right: 9rem;
+  top: 2.5rem;
+  position: absolute;
+}
+.cld-two{
+  left: 9rem;
+  bottom: 11.5rem;
+  position: absolute;
+}
+.cld-one img, .cld-two img{
+  width: 100px;
+}
+.info{
+  margin-top: 6rem;
+  color: #64b6a9;
+}
+.info h1{
+  font-family: "Sacramento", cursive;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 3rem;
+}
+.info p{
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+.info span{
+  text-decoration: underline;
+}
+
+.mountain{
+  margin-top: 4rem;
+}
+.mountain img{
+  width: 350px;
+  display: block;
+}
+
+/****** DETAILS SECTION *******/
+.details{
+  width:55%;
+  margin: 0 auto;
+  color: #64b6a9;
+  padding-top: 5rem;
+}
+.details img{
+  width: 150px;
+  display: block;
+}
+.hello, .skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hello p:nth-of-type(1){
+  font-size: 1.2rem;
+  padding: .4rem 0 .8rem;
+}
+.hello p:nth-of-type(2){
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #575757;
+}
+.dots{
+  color: #333;
+  text-align: center;
+}
+.skills h2{
+  margin: 2.5rem 0;
+  font-weight: 400;
+}
+.skills>div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 7px solid #333;
+  padding-top: .35rem;
+}
+.skills .sk-desc{
+  align-self: self-start;
+  padding: .6rem 0;
+}
+.skills .sk-desc p{
+  color: #575757;
+  margin-top: 1rem;
+}
+.skills .sk-desc .teach{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/******* PORTFOLIO *******/
+.portfolio{
+  background-color: #eeeeee;
+  padding-top: 3rem;
+  margin: 4rem 0;
+}
+.portfolio img{
+  width: 100%;
+  height: 100%;
+}
+.album{
+  margin: 0 auto;
+  width: 25%;
+}
+.album h2{
+  font-size: 1.8rem;
+  color: #106123;
+}
+.album .line{
+  width: 100%;
+  height: 4px;
+  background-color: #24bdd5;
+}
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-content: center;
+  gap: 1rem;
+  width: 70%;
+  margin: 0 auto;
+}
+.gallery div{
+  width: 300px;
+  height: 300px;
+}
+.gallery img:hover{
+ animation: zoom-in .7s .2s ;
+  animation-iteration-count: inherit;
+}
+@keyframes zoom-in {
+  from {transform: scale(.95);}
+  to {transform: scale(1.1);}
+}
+
+
+/******* GET IN TOUCH SECTION *******/
+.in-touch{
+  position: relative;
+  width: 45%;
+  margin: 0 auto;
+}
+.git{
+  text-align: center;
+}
+.git h2{
+  color: #64b6a9;
+  margin: 2.5rem 0 1rem;
+  font-weight: 400;
+}
+.git p{
+  color: #37655e;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.in-touch button{
+  color: white;
+  border: none;
+  padding: .4rem;
+  background-color: #4e979f;
+  border-radius: 5px;
+  
+}
+.in-touch .btn{
+  margin-top: 1rem;
+  position: absolute;
+  right: 0;
+}
+/******* FOOTER SECTION *******/
+.footer{
+  margin-top: 6rem;
+  background-color: #4e979f;
+}
+.links ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 5rem;
+  gap: 5rem;
+}
+.links ul li{
+  list-style-type: none;
+}
+.links ul li a{
+  text-decoration: none;
+  color: #266168;
+  font-size: 1rem;
+}
+.footer p{
+  text-align: center;
+  color: #d5d5d5;
+}
