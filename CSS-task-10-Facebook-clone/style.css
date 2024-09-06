@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Ubuntu&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  background-color: #e2e2e2;
+}
+
+/** Header and navbar styles*/
+header{
+  background-color: navy;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: .5rem;
+}
+nav h1{
+  color: #6aac07;
+}
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  z-index: 20
+}
+nav ul li{
+  list-style-type: none;
+  position: relative;
+}
+nav ul li.dropdown:hover > ul{
+  display: block;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+nav ul li ul{
+  background-color: navy;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 210%;
+  top: 100%;
+}
+nav ul li ul a{
+  display: inline-block;
+  padding: .6rem 1.2rem;
+  width: 100%;
+}
+nav ul li ul a:hover{
+  background-color: #599205;
+}
+
+/** Navbar Second drop */
+nav ul li ul li ul{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  display: none;
+}
+nav ul li ul li.dropdown-two:hover > ul{
+  display: block;
+}
+.logo{
+  width: 50px;
+}
+.logo img{
+  width: 100%;
+  height: 50px;
+  border-radius: 100%;
+}
+
+
+/** MAIN CONTENT: GRID LAYOUT */
+.grid-container{
+  display: grid;
+  grid-template-columns: 40% 35% 22.5%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 25% 25% 15% 35%;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-areas: 
+  "post feed-two suggestions"
+  "feed-one feed-two suggestions"
+  "feed-one feed-two suggestions"
+  "feed-one feed-three suggestions";
+  min-height: 100vh;
+}
+
+/*** POST CONTAINER */
+.grid-container .post{
+  grid-area: post;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.post div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.reactions span, .p-react span{
+  padding: .5rem;
+}
+.post button{
+  border: none;
+  background-color: #2a6aeb;
+  padding: .4rem;
+  color: white;
+}
+
+/*** FEED ONE CONTAINER */
+.grid-container .feed-one{
+  grid-area: feed-one;
+  background-color: white;
+  padding: 1rem 1.2rem 0;
+  position: relative;
+}
+.feed-one .user{
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+.user .name p{
+  font-size: .8rem;
+  font-weight: 500;
+}
+.feed-one .date{
+  position: absolute;
+  right: 0;
+  font-size: .8rem;
+}
+.feed-one .date-two{
+  display: none;
+}
+.content .post-img{
+  width: 100%;
+  margin: 1rem 0 0;
+  border: 1px solid #d6d6d6;
+  padding: 1rem;
+}
+.post-img img{
+  width: 100%;
+  height: 200px;
+}
+
+.content .post-img span a{
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .8rem;
+}
+.reactions{
+  position: absolute;
+  bottom: 2rem;
+}
+.reactions .com{
+  margin-left: 1.5rem;
+  color: #2a6aeb;
+  font-weight: 600;
+}
+
+/*** FEED TWO CONTAINER */
+.grid-container .feed-two{
+  grid-area: feed-two;
+  background-color: white;
+  position: relative;
+}
+.feed-two .post-img img{
+  width: 100%;
+  height: 250px;
+}
+
+/*** FEED THREE CONTAINER */
+.grid-container .feed-three{
+  grid-area: feed-three;
+  background-color: white;
+  position: relative;
+}
+
+/*** SUGGESTIONS CONTAINER */
+.grid-container .suggestions{
+  grid-area: suggestions;
+  background-color: white;
+  padding: .7rem .5rem;
+}
+.suggestions .user{
+  display: flex;
+  position: relative;
+  gap: .5rem;
+  padding: 1.5rem 0;
+}
+.suggestions h2{
+  color: #2a6aeb;
+  font-size: 1.2rem;
+}
+.suggestions .user h3{
+  font-size: 1rem;
+  padding-right: 2rem;
+}
+.suggestions .add{
+  padding: .4rem .7rem;
+  background-color: #2a6aeb;
+  border: none;
+  color: white;
+  border-radius: 25px;
+}
+.suggestions .see{
+  padding: .5rem;
+  width: 100%;
+  background-color: #2a6aeb;
+  border: none;
+  color: white;
+}
+
+
+/**** Screen width between 0px and 667px */
+@media screen and (max-width:667px){
+  body{
+    background-color: #333;
+  }
+  nav{   
+    width: 60%;
+  }
+  nav ul{
+    display: none;
+  }
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grid-container .post>div{
+      margin-top: 3rem;
+  }
+  .grid-container .feed-one{
+    padding-bottom: 5rem;
+  }
+  .grid-container .suggestions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .suggestions .see{
+    display: block;
+    width: 55%;
+    border-radius: .6rem;
+    margin: 0 auto;
+  }
+  .suggestions .user h3{
+    font-size: 1rem;
+    padding-right: 5rem;
+  }
+}
+
+
+/**** Screen width between 668px and 1200px */
+@media screen and  (min-width: 668px) and (max-width: 1200px){
+  nav{   
+    width: 90%;
+  }
+  nav ul{
+    width: 60%;
+  }
+  .feed-one .date{
+    display: none;
+  }
+  .feed-one .date-two{
+    display: block;
+  }
+  .grid-container{
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 20% 32% 33% 40%;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-areas: 
+    "post feed-two"
+    "feed-one feed-two"
+    "feed-one feed-three"
+    "suggestions suggestions"
+    ;
+  }
+  .grid-container .suggestions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .grid-container .suggestions .sug-wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .suggestions .user{
+    display: flex;
+    position: relative;
+    padding: 1.5rem 0;
+  }
+  .suggestions .user h3{
+    font-size: 1rem;
+    padding-right: 1rem;
+  }
+  .suggestions .see{
+    display: block;
+    width: 25%;
+    border-radius: .6rem;
+    margin: 0 auto;
+  }
+  
+}

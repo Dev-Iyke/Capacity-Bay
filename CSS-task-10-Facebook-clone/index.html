@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Website Layout</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/397319bfa6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h1>Dev-Iyke</h1>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Services</a>
+            <ul>
+              <li><a href="#">Python</a></li>
+              <li><a href="#">FullStack</a></li>
+              <li class="dropdown-two">
+                <a href="#">Linux</a>
+                <ul>
+                  <li><a href="#">Splunk</a></li>
+                  <li><a href="#">Javascript</a></li>
+                  <li><a href="#">Java</a></li>
+                  <li><a href="#">React</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <div class="logo">
+          <img src="./img/logo.jpg" alt="logo" />
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="grid-container">
+        <div class="post">
+          <p>What's on your mind?</p>
+          <div>
+            <p class="p-react">
+              <span><i class="fa-solid fa-user"></i></span>
+              <span><i class="fa-solid fa-paperclip"></i></span>
+              <span><i class="fa-solid fa-camera"></i></span>
+            </p>
+            <button>POST</button>
+          </div>
+        </div>
+        <div class="feed-one">
+          <div class="user">
+            <div class="logo"><img src="./img/logo-1.png" alt="pr-pic" /></div>
+            <div class="name">
+              <h3>DesignHill</h3>
+              <p>Discussions</p>
+              <p class="date-two">Jul 29, 2016</p>
+            </div>
+            <p class="date">Jul 29, 2016</p>
+          </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatibus nemo autem quam?
+            </p>
+            <div class="post-img">
+              <img src="./img/post.jpeg" alt="pt-img" />
+              <span><a href="designhill.com">designhill.com</a></span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur, officia harum. Quas eligendi mollitia omnis quidem ex
+                modi enim dicta, ullam eum? Provident debitis consequatur, eius
+                numquam praesentium reprehenderit iure.
+              </p>
+            </div>
+          </div>
+          <div class="reactions">
+            <span><i class="fa-solid fa-heart" style="color: red"></i></span>
+            <span><i class="fa-solid fa-comment"></i></span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
+            <span class="com">Add a comment</span>
+          </div>
+        </div>
+
+        <div class="feed-two feed-one">
+          <div class="user">
+            <div class="logo"><img src="./img/logo-3.jpeg" alt="pr-pic" /></div>
+            <div class="name">
+              <h3>Pixel Solutions, LLC</h3>
+              <p>Discussions</p>
+              <p class="date-two">Yesterday 10:20PM</p>
+            </div>
+            <p class="date">Yesterday 10:20PM</p>
+          </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatibus nemo autem quam?
+            </p>
+            <div class="post-img">
+              <img src="./img/post-2.png" alt="pt-img" />
+            </div>
+          </div>
+          <div class="reactions">
+            <span><i class="fa-solid fa-heart" style="color: red"></i></span>
+            <span><i class="fa-solid fa-comment"></i></span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
+            <span class="com">Add a comment</span>
+          </div>
+        </div>
+
+        <div class="feed-three feed-one">
+          <div class="user">
+            <div class="logo"><img src="./img/logos.jpeg" alt="pr-pic" /></div>
+            <div class="name">
+              <h3>Pixel Solutions, LLC</h3>
+              <p>Discussions</p>
+              <p class="date-two">Yesterday 10:20PM</p>
+            </div>
+            <p class="date">Yesterday 10:20PM</p>
+          </div>
+          <div class="content">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptatibus nemo autem quam? Lorem ipsum dolor sit amet
+              consectetur adipisicing.
+            </p>
+          </div>
+          <div class="reactions">
+            <span><i class="fa-solid fa-heart" style="color: red"></i></span>
+            <span><i class="fa-solid fa-comment"></i></span>
+            <span><i class="fa-solid fa-share-nodes"></i></span>
+            <span class="com">Add a comment</span>
+          </div>
+        </div>
+
+        <div class="suggestions">
+          <h2>Suggestions</h2>
+          <div class="sug-wrap">
+            <div class="user">
+              <div class="logo">
+                <img src="./img/logos.jpeg" alt="pr-pic" />
+              </div>
+              <div class="name">
+                <h3>Pixel Solutions, LLC</h3>
+                <p>Discussions</p>
+                <button class="add">Add</button>
+              </div>
+              <p class="date">x</p>
+            </div>
+
+            <div class="user">
+              <div class="logo">
+                <img src="./img/logo-1.png" alt="pr-pic" />
+              </div>
+              <div class="name">
+                <h3>Pixel Solutions, LLC</h3>
+                <p>Discussions</p>
+                <button class="add">Add</button>
+              </div>
+              <p class="date">x</p>
+            </div>
+
+            <div class="user">
+              <div class="logo">
+                <img src="./img/logo-3.jpeg" alt="pr-pic" />
+              </div>
+              <div class="name">
+                <h3>Pixel Solutions, LLC</h3>
+                <p>Discussions</p>
+                <button class="add">Add</button>
+              </div>
+              <p class="date">x</p>
+            </div>
+
+            <div class="user">
+              <div class="logo"><img src="./img/logo.jpg" alt="pr-pic" /></div>
+              <div class="name">
+                <h3>Pixel Solutions, LLC</h3>
+                <p>Discussions</p>
+                <button class="add">Add</button>
+              </div>
+              <p class="date">x</p>
+            </div>
+
+            <div class="user">
+              <div class="logo">
+                <img src="./img/logos.jpeg" alt="pr-pic" />
+              </div>
+              <div class="name">
+                <h3>Pixel Solutions, LLC</h3>
+                <p>Discussions</p>
+                <button class="add">Add</button>
+              </div>
+              <p class="date">x</p>
+            </div>
+
+            <div class="user">
+              <div class="logo">
+                <img src="./img/logo-3.jpeg" alt="pr-pic" />
+              </div>
+              <div class="name">
+                <h3>Pixel Solutions, LLC</h3>
+                <p>Discussions</p>
+                <button class="add">Add</button>
+              </div>
+              <p class="date">x</p>
+            </div>
+
+            
+          </div>
+          <button class="see">See more</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
